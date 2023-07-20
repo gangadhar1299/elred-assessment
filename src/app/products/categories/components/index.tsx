@@ -5,15 +5,15 @@ import { usePathname } from 'next/navigation'
 import { clsx } from 'clsx'
 import { TCategory } from '@/types'
 import Image from 'next/image'
-import { NoImage } from '.'
+import { NoImage } from '../../../../components'
 
 export function Category ({ category }: { category: TCategory }) {
   const pathname = usePathname()
   const isActive = pathname.includes(category.categoryId)
-  debugger
+
   return (
     <Link
-      href={`/products/${category.categoryId}`}
+      href={`/products/categories/${category.categoryId}`}
       className={clsx(
         'border-2 hover:border-red-600 rounded-lg p-0.5',
         isActive ? 'border-red-600' : 'border-transparent'

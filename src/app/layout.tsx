@@ -31,9 +31,11 @@ export default function RootLayout ({
         )}
       >
         <Navbar />
-        <div className='px-10 py-5 flex gap-2 flex-1'>
-          <SideBar />
-          {children}
+        <div className='flex flex-col gap-4 flex-1'>
+          <div className='px-10 py-5 flex gap-4 flex-1'>
+            <SideBar />
+            {children}
+          </div>
         </div>
       </body>
     </html>
@@ -73,13 +75,8 @@ function Navbar () {
   )
 }
 
-function getRandomNumber () {
-  return Math.floor(Math.random() * 100)
-}
-
 function getRandomPersonImage () {
-  const randomNumber = getRandomNumber()
-  return `https://randomuser.me/api/portraits/men/${randomNumber}.jpg`
+  return `https://randomuser.me/api/portraits/men/33.jpg`
 }
 
 function SideBar () {

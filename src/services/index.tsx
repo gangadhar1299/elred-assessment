@@ -1,11 +1,11 @@
-import { TCategory, TSubCategory } from '@/types'
+import { TCategory, TProduct, TSubCategory } from '@/types'
 
 type TGetProductsResponse = {
   success: boolean
   isAuth: boolean
   message: string
   totalCategoryCount: number
-  result: Array<any>
+  result: Array<TProduct>
 }
 
 export async function getProducts (
